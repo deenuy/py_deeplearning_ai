@@ -123,12 +123,30 @@ This is a containerized production-grade machine learning project to deploy and 
 
 ## Documentation
 
-Comprehensive documentation is available in the `docs/` directory. To view the documentation locally, run:
+This project uses MkDocs for comprehensive documentation. MkDocs is a fast, simple, and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+
+Our documentation covers:
+
+- Project overview and architecture
+- API endpoints and usage
+- Model training and evaluation processes
+- Deployment instructions
+- Troubleshooting guide
+
+To view the documentation locally:
+
+1. Ensure MkDocs is installed: `pip install mkdocs mkdocs-material`
+2. Navigate to the project root directory
+3. Run: `mkdocs serve`
+4. Open your browser to `http://localhost:8000`
+
+The documentation is also automatically built and deployed with each update to the main branch, and can be accessed online at [your-project-docs-url].
+
+To build the documentation for production:
 
 ```bash
-mkdocs serve
+mkdocs build
 ```
-Then open your browser to http://localhost:8000/docs
 
 ## Contributing
 
