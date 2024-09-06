@@ -1,0 +1,71 @@
+site_name: Logistic Regression Image Classifier
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Model: model.md
+  - API: api.md
+  - Deployment: deployment.md
+  - Tutorials:
+      - Data Preparation: tutorials/data-preparation.md
+      - Model Training: tutorials/model-training.md
+  - Troubleshooting: troubleshooting.md
+  - FAQ: faq.md
+  - Best Practices: best-practices.md
+
+exclude_docs:
+  - 'lecture_notes/*.pdf'
+  - 'lecture_notes/*.java'
+
+plugins:
+  - search
+  - copy_extra_files
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: white
+    accent: green
+  font:
+    text: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/syntax.css
+
+markdown_extensions:
+  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/deenuy/logistic-regression-image-classifier

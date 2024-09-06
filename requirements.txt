@@ -1,0 +1,74 @@
+numpy
+matplotlib
+h5py
+scipy
+Pillow
+
+# FastAPI and related
+fastapi
+uvicorn
+pydantic
+
+# Data processing and machine learning
+numpy
+scipy
+scikit-learn
+pandas
+matplotlib
+pillow
+
+# HTTP client (useful for testing)
+httpx
+
+# Testing
+pytest
+
+# Logging (optional, as Python has a built-in logging module)
+loguru
+
+# Production WSGI server
+gunicorn
+
+# For handling environment variables
+python-dotenv
+
+# Serialization/Deserialization
+marshmallow
+
+# Data validation
+email-validator
+
+# OpenAPI (Swagger) support
+swagger-ui-bundle
+
+# For type hinting (useful with FastAPI)
+typing-extensions
+
+# For more secure handling of passwords and secrets
+passlib
+bcrypt
+
+# JWT tokens for authentication
+python-jose
+
+# For handling CORS
+starlette
+
+# Database ORM (if needed)
+sqlalchemy
+
+# Database migrations (if using SQLAlchemy)
+alembic
+
+# PostgreSQL database adapter (if using PostgreSQL)
+psycopg2-binary
+
+# Redis (if needed for caching or queue)
+redis
+
+# Task queue (if needed)
+celery
+
+# MkDocs for documentation
+mkdocs
+mkdocs-material
