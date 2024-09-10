@@ -145,7 +145,7 @@ This guide provides solutions to common issues you might encounter while using t
 If you're still experiencing problems after trying these solutions, please:
 
 1. Check our [FAQ](faq.md) for more information
-2. Review the [API documentation](api.md) to ensure you're using the service correctly
+2. Review the [API documentation](../api/api.md) to ensure you're using the service correctly
 3. Open an issue on our [GitHub repository](https://github.com/your-org/image-classifier)
 4. Contact our support team at support@your-domain.com
 

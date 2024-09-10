@@ -6,11 +6,11 @@ Welcome to the documentation for our Logistic Regression Image Classifier projec
 
 - [Getting Started](getting-started.md)
 - [Model Information](model.md)
-- [API Documentation](api.md)
-- [Deployment Guide](deployment.md)
+- [API Documentation](api/api.md)
+- [Deployment Guide](deployment/deployment.md)
 - [Tutorials](tutorials/data-preparation.md)
-- [Troubleshooting](troubleshooting.md)
-- [FAQ](faq.md)
+- [Troubleshooting](support/troubleshooting.md)
+- [FAQ](support/faq.md)
 - [Best Practices](best-practices.md)
 
 ## Project Overview

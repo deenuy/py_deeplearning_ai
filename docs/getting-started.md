@@ -36,6 +36,6 @@ The API will be available at `http://localhost:8000`.
 ## Next Steps
 
 - Learn about [the model](model.md)
-- Explore the [API documentation](api.md)
-- See how to [deploy the project](deployment.md)
+- Explore the [API documentation](api/api.md)
+- See how to [deploy the project](deployment/deployment.md)
   Create similar content for the other Markdown files based on your project specifics.

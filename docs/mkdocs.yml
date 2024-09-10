@@ -10,8 +10,19 @@ nav:
       - Data Preparation: tutorials/data-preparation.md
       - Model Training: tutorials/model-training.md
   - Troubleshooting: troubleshooting.md
-  - FAQ: faq.md
+  - Support:
+      - FAQ: faq.md
   - Best Practices: best-practices.md
+  - Development:
+      - 'Development Processes': development/development-processes.md
+      - 'Hotfix Process': development/hotfix-process.md
+      - 'Minor Version Release': development/minor-version-release-process.md
+      - 'Major Version Release': development/major-version-release-process.md
+  - Deployment:
+      - 'Deployment Process': deployment/deployment-process.md
+      - 'Rollback Process': deployment/rollback-process.md
+  - API:
+      - 'API Reference': api/api.md
 
 exclude_docs:
   - 'lecture_notes/*.pdf'

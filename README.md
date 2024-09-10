@@ -66,6 +66,13 @@ This is a containerized production-grade machine learning project to deploy and 
     │   └── v2/                     # API version 2
     ├── build/                      # JFrog artifact storage
     ├── ci/                         # CI/CD pipeline configurations
+    │   └── scripts/                # Scripts used in CI/CD process
+    ├── .github/
+    │   └── workflows/
+    │       └── ci-cd.yml           # GitHub Actions workflow file
+    ├── docs/
+    │   ├── CHANGELOG.md            # Changelog file
+    │   └── CONTRIBUTING.md         # Contribution guidelines
     ├── config/                     # Project-level configurations
     │   ├── dev/                    # Development environment configs
     │   ├── prod/                   # Production environment configs
