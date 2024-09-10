@@ -1,1 +1,10 @@
-DEBUG=True
+logs:
+  dir: "./logs"
+  fname: "ml_classifier"
+  level: "INFO"
+  when: "midnight"
+  interval: 1
+  backup_count: 15
+
+model:
+  path: "./model/latest"

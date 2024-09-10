@@ -4,6 +4,7 @@ from api.models.schemas import PredictRequest, PredictResponse, ErrorResponse
 from src.models.logistic_regression_nn import LogisticRegression
 from src.data.data_processing import preprocess_data
 from api.utils.logging import setup_logger
+from api.utils.metrics import metrics
 import numpy as np
 import os
 import time
@@ -32,12 +33,6 @@ async def get_docs():
 
 @router.post("/predict", response_model=PredictResponse, responses={400: {"model": ErrorResponse}, 500: {"model": ErrorResponse}})
 async def predict(image: UploadFile = File(...)):
-    """
-    Endpoint for making predictions.
-
-    Expects an image file.
-    Returns a JSON response with the prediction.
-    """
     try:
         start_time = time.time()
         contents = await image.read()
@@ -46,20 +41,27 @@ async def predict(image: UploadFile = File(...)):
         prediction = model.predict(img)
 
         latency = time.time() - start_time
+        prediction_class = int(prediction[0, 0])
+
+        metrics.record_prediction(prediction_class, latency)
 
         logger.info("Model prediction", extra={
-            "prediction_class": int(prediction[0, 0]),
+            "prediction_class": prediction_class,
             "prediction_latency": latency,
             "image_filename": image.filename,
         })
 
-        return PredictResponse(prediction=int(prediction[0, 0]))
+        return PredictResponse(prediction=prediction_class)
     except ValueError as ve:
         logger.error(f"Invalid input: {str(ve)}", extra={"image_filename": image.filename})
         raise HTTPException(status_code=400, detail=str(ve))
     except Exception as e:
         logger.error(f"An error occurred during prediction: {str(e)}", extra={"image_filename": image.filename})
         raise HTTPException(status_code=500, detail="Internal server error")
+
+@router.get("/metrics")
+async def get_metrics():
+    return metrics.get_metrics()
 
 @router.get("/healthz")
 async def health_check():
