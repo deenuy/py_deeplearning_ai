@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-classifier
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ml-classifier
+  template:
+    metadata:
+      labels:
+        app: ml-classifier
+    spec:
+      containers:
+        - name: ml-classifier
+          image: your-image-registry/ml-classifier:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: CONFIG_PATH
+              value: "/app/config/prod/config.yml"
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 8000
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          volumeMounts:
+            - name: logs
+              mountPath: /app/logs
+      volumes:
+        - name: logs
+          emptyDir: {}

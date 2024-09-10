@@ -72,3 +72,8 @@ celery
 # MkDocs for documentation
 mkdocs
 mkdocs-material
+
+# Logging with correlation ID
+python-multipart
+pyyaml
+asgi-correlation-id
